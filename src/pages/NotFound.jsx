@@ -1,7 +1,11 @@
 import React from "react"
 
 const NotFound = () => {
-	return <div>404</div>
+	return (
+		<main className="min-height-adjustment centered-container">
+			<p>test</p>
+		</main>
+	)
 }
 
 export default NotFound

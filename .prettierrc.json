@@ -4,5 +4,14 @@
 	"tabWidth": 2,
 	"useTabs": true,
 	"endOfLine": "lf",
-	"arrowParens": "avoid"
+	"arrowParens": "avoid",
+	"printWidth": 70,
+	"overrides": [
+		{
+			"files": "*.scss",
+			"options": {
+				"printWidth": 80
+			}
+		}
+	]
 }

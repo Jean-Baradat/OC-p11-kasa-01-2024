@@ -1,8 +1,8 @@
 // Utils
-@import "./utils/helpers";
 @import "./utils/variables";
-@import "./utils/mixins";
 @import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/helpers";
 // Vendors
 
 // Base
@@ -11,6 +11,8 @@
 // Components
 
 // Layout
+@import "./layouts/header";
+@import "./layouts/footer";
 
 // Pages
 

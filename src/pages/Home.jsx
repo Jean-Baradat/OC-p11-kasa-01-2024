@@ -1,12 +1,10 @@
 import React from "react"
-import Header from "../layouts/Header"
 
 const Home = () => {
 	return (
-		<>
-			<Header />
+		<main className="min-height-adjustment centered-container">
 			<div>Home</div>
-		</>
+		</main>
 	)
 }
 

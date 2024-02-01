@@ -1,0 +1,74 @@
+.main-header {
+	@include centered-container;
+	margin-top: $headerDesktopMarginTop;
+
+	@include media-max($xsBreakpoint) {
+		& {
+			margin-top: $headerMobileMarginTop;
+		}
+	}
+}
+
+.main-header > .main-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: $mainNavHeight;
+
+	.logo {
+		height: 68px;
+		display: block;
+
+		@include media-max($xsBreakpoint) {
+			& {
+				width: 145px;
+			}
+		}
+	}
+
+	.links {
+		display: flex;
+		list-style: none;
+		gap: 57px;
+
+		@include media-max($smBreakpoint) {
+			& {
+				height: 100%;
+			}
+		}
+
+		@include media-max($xsBreakpoint) {
+			& {
+				gap: 26px;
+			}
+		}
+
+		.link {
+			display: flex;
+			align-items: center;
+			color: $primary;
+			font-size: 24px;
+			transition: text-shadow linear 100ms;
+
+			&.active {
+				text-decoration: underline;
+			}
+
+			&:hover {
+				text-shadow: 0 0 25px lighten($primary, 5%);
+			}
+
+			@include media-max($smBreakpoint) {
+				& {
+					height: 100%;
+				}
+			}
+
+			@include media-max($xsBreakpoint) {
+				& {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

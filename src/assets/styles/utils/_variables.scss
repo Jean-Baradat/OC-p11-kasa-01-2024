@@ -5,7 +5,7 @@ $tertiary: #000;
 
 /* Fonts */
 $mainFont: "Montserrat";
-$wghtAndStyle: "0,400;0,700;1,400;1,700";
+$wghtAndStyle: "0,500;0,700;1,500;1,700";
 
 /* Breakpoints */
 $xsBreakpoint: 576px;
@@ -13,3 +13,9 @@ $smBreakpoint: 768px;
 $mdBreakpoint: 1024px;
 $lgBreakpoint: 1290px;
 $xlBreakpoint: 1440px;
+
+/* Others */
+$mainFooterHeight: 209px;
+$headerDesktopMarginTop: 45px;
+$headerMobileMarginTop: 20px;
+$mainNavHeight: 68px;

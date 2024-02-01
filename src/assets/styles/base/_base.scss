@@ -14,7 +14,6 @@ html {
 
 body {
 	font-family: $mainFont, sans-serif;
-	@include global-max-screen-width;
 }
 
 h1 {

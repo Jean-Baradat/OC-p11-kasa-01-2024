@@ -3,12 +3,6 @@
 	box-shadow: 0 7px 12px 3px rgba(0, 0, 0, 0.1);
 }
 
-// this mixin is used to create a global max screen width
-@mixin global-max-screen-width {
-	max-width: 1240px;
-	margin: 0 auto;
-}
-
 // this mixin is used to create a media query for a minimum screen width
 @mixin media-min($min-width) {
 	@media screen and (min-width: $min-width) {
@@ -40,5 +34,18 @@
 @mixin keyframes($name) {
 	@keyframes #{$name} {
 		@content;
+	}
+}
+
+// this mixin is used to centering content and setting a max with on layout elements
+@mixin centered-container {
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 6.25rem;
+
+	@include media-max($smBreakpoint) {
+		& {
+			padding: 0 1.25rem;
+		}
 	}
 }

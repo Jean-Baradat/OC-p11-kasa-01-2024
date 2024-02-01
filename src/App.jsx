@@ -1,19 +1,11 @@
 import React from "react"
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Home from "@/pages/Home"
-import About from "@/pages/About"
-import NotFound from "@/pages/NotFound"
+import { BrowserRouter } from "react-router-dom"
+import Router from "@/Router"
 
 const App = () => {
 	return (
 		<BrowserRouter>
-			<Routes>
-				<Route index element={<Home />} />
-
-				<Route path="/about" element={<About />} />
-
-				<Route path="*" element={<NotFound />} />
-			</Routes>
+			<Router />
 		</BrowserRouter>
 	)
 }

@@ -1,0 +1,31 @@
+.main-footer {
+	background-color: $tertiary;
+	height: $mainFooterHeight;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 1.78rem;
+
+	@include media-max($xsBreakpoint) {
+		& {
+			gap: 1rem;
+		}
+	}
+
+	.logo {
+		width: 122px;
+	}
+
+	p {
+		color: #fff;
+		font-size: 24px;
+		text-align: center;
+
+		@include media-max($xsBreakpoint) {
+			& {
+				font-size: 12px;
+			}
+		}
+	}
+}
