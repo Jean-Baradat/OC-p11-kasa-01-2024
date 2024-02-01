@@ -1,4 +1,8 @@
-# Sass Architecture Structure
+# 7-1 pattern
+#### Documentary resources
+- [structurez-sass-avec-le-systeme-7-1](https://louisetiennegirard.fr/blog/structurez-sass-avec-le-systeme-7-1)
+- [Use the 7-1 pattern for a manageable codebase](https://openclassrooms.com/fr/courses/5625786-produce-maintainable-css-with-sass/5723581-use-the-7-1-pattern-for-a-manageable-codebase)
+
 
 ```
 sass/
@@ -54,6 +58,10 @@ sass/
 # Import order in index.scss
 
 1. utils
+   1. Variables
+   2. Functions
+   3. Mixins
+   4. Helpers
 2. vendors
 3. base
 4. components
