@@ -1,5 +1,5 @@
-import React from "react";
-import Header from "../layouts/Header";
+import React from "react"
+import Header from "../layouts/Header"
 
 const Home = () => {
 	return (
@@ -7,7 +7,7 @@ const Home = () => {
 			<Header />
 			<div>Home</div>
 		</>
-	);
-};
+	)
+}
 
-export default Home;
+export default Home

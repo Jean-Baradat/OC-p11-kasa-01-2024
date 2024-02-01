@@ -1,5 +1,5 @@
-import React from "react";
-import Header from "../layouts/Header";
+import React from "react"
+import Header from "../layouts/Header"
 
 const About = () => {
 	return (
@@ -7,7 +7,7 @@ const About = () => {
 			<Header />
 			<div>About</div>
 		</>
-	);
-};
+	)
+}
 
-export default About;
+export default About

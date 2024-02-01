@@ -19,8 +19,8 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"lint": "eslint ./src",
-		"lint:fix": "eslint --fix ."
+		"lint": "eslint ./src/**/*.jsx",
+		"lint:fix": "eslint --fix ./src/**/*.jsx"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -41,6 +41,7 @@
 		]
 	},
 	"devDependencies": {
+		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
 		"@craco/craco": "^7.1.0",
 		"eslint": "^8.56.0",
 		"eslint-config-airbnb": "^19.0.4",
