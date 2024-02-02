@@ -11,10 +11,12 @@
 
 // Components
 @import "./components/heading";
+@import "./components/card";
 
 // Layout
 @import "./layouts/header";
 @import "./layouts/footer";
+@import "./layouts/CardLayout";
 
 // Pages
 @import "./pages/home";

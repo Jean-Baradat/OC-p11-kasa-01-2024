@@ -1,5 +1,6 @@
 import React from "react"
 import Heading from "@/components/Heading"
+import CardLayout from "@/layouts/CardLayout"
 
 const Home = () => {
 	return (
@@ -11,7 +12,7 @@ const Home = () => {
 					content: "Chez vous, partout et ailleurs",
 				}}
 			/>
-			<div>Home</div>
+			<CardLayout />
 		</main>
 	)
 }

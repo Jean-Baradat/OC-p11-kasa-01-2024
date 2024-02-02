@@ -1,0 +1,30 @@
+.cards-layout {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	gap: 3.75rem;
+	background-color: $secondary;
+	padding: 50px;
+	margin: 50px 0;
+	border-radius: 25px;
+
+	@include media-max($lgBreakpoint) {
+		& {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 2rem;
+			padding: 2rem;
+		}
+	}
+
+	@include media-max($mdBreakpoint) {
+		& {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@include media-max($smBreakpoint) {
+		& {
+			grid-template-columns: 1fr;
+		}
+	}
+}

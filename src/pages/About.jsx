@@ -8,7 +8,6 @@ const About = () => {
 				imgData={{ alt: "Paysage montagneux", file: "heading-about" }}
 				titleData={{
 					hasTitle: false,
-					content: "",
 				}}
 			/>
 			<div>About</div>
