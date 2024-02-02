@@ -36,16 +36,3 @@
 		@content;
 	}
 }
-
-// this mixin is used to centering content and setting a max with on layout elements
-@mixin centered-container {
-	max-width: 1240px;
-	margin: 0 auto;
-	padding: 0 6.25rem;
-
-	@include media-max($smBreakpoint) {
-		& {
-			padding: 0 1.25rem;
-		}
-	}
-}

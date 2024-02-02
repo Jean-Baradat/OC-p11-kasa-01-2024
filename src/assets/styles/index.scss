@@ -8,12 +8,16 @@
 // Base
 @import "./base/base";
 @import "./base/fonts";
+
 // Components
+@import "./components/heading";
 
 // Layout
 @import "./layouts/header";
 @import "./layouts/footer";
 
 // Pages
+@import "./pages/home";
+@import "./pages/about";
 
 // Themes

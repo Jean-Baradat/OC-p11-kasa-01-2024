@@ -1,0 +1,24 @@
+.heading {
+	position: relative;
+
+	.title {
+		position: absolute;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		color: #fff;
+		z-index: 2;
+	}
+
+	.bg-image {
+		height: 223px;
+		display: block;
+		object-fit: cover;
+		width: 100%;
+		border-radius: 25px;
+		filter: brightness(0.7);
+	}
+}

@@ -1,5 +1,5 @@
 .main-header {
-	@include centered-container;
+	@extend .centered-container;
 	margin-top: $headerDesktopMarginTop;
 
 	@include media-max($xsBreakpoint) {
