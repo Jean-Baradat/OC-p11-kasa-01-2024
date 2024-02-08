@@ -1,5 +1,6 @@
 import React from "react"
 import { getImageUrl } from "@/utils/Utils"
+import PropTypes from "prop-types"
 
 const Heading = ({ imgData, titleData }) => {
 	const displayTitle = () => {
@@ -18,6 +19,17 @@ const Heading = ({ imgData, titleData }) => {
 			/>
 		</div>
 	)
+}
+
+Heading.propTypes = {
+	titleData: PropTypes.shape({
+		content: PropTypes.string,
+		hasTitle: PropTypes.bool.isRequired,
+	}),
+	imgData: PropTypes.shape({
+		alt: PropTypes.string.isRequired,
+		file: PropTypes.string.isRequired,
+	}),
 }
 
 export default Heading

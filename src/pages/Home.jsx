@@ -6,7 +6,10 @@ const Home = () => {
 	return (
 		<main className="min-height-adjustment centered-container home">
 			<Heading
-				imgData={{ alt: "Paysage côtier", file: "heading-home" }}
+				imgData={{
+					alt: "Paysage côtier",
+					file: "heading-home",
+				}}
 				titleData={{
 					hasTitle: true,
 					content: "Chez vous, partout et ailleurs",
