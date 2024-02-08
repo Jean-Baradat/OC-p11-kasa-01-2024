@@ -58,10 +58,10 @@ sass/
 # Import order in index.scss
 
 1. utils
-   1. Variables
-   2. Functions
-   3. Mixins
-   4. Helpers
+   1. variables
+   2. functions
+   3. mixins
+   4. helpers
 2. vendors
 3. base
 4. components

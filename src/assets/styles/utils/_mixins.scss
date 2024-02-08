@@ -1,6 +1,6 @@
 // this mixin is used to create a global box shadow
 @mixin global-box-shadow {
-	box-shadow: 0 7px 12px 3px rgba(0, 0, 0, 0.1);
+	text-shadow: 0 0 25px lighten($primary, 5%);
 }
 
 // this mixin is used to create a media query for a minimum screen width

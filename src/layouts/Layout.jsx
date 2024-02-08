@@ -8,15 +8,11 @@ const Layout = () => {
 	const [logements, setLogements] = useState(null)
 
 	useEffect(() => {
-		async function startFetching() {
+		;(async () => {
 			setLogements(null)
 			const result = await fetchData()
-			setTimeout(() => {
-				setLogements(result)
-			}, 2000)
-		}
-
-		startFetching()
+			setLogements(result)
+		})()
 	}, [])
 	return (
 		<>

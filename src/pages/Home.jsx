@@ -1,6 +1,6 @@
 import React from "react"
 import Heading from "@/components/Heading"
-import CardLayout from "@/layouts/CardLayout"
+import CardLayout from "@/components/CardLayout"
 
 const Home = () => {
 	return (

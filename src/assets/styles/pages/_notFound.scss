@@ -1,0 +1,29 @@
+.not-found {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: $primary;
+	gap: 139px;
+	padding: 139px 0;
+
+	.title {
+		font-size: 288px;
+		font-weight: 700;
+		line-height: 250px;
+	}
+
+	.mess {
+		font-size: 36px;
+	}
+
+	.link {
+		text-decoration: underline;
+		font-size: 18px;
+		transition: text-shadow linear 100ms;
+
+		&:hover {
+			@include global-box-shadow;
+		}
+	}
+}

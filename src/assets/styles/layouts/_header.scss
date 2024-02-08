@@ -57,7 +57,7 @@
 			}
 
 			&:hover {
-				text-shadow: 0 0 25px lighten($primary, 5%);
+				@include global-box-shadow;
 			}
 
 			@include media-max($smBreakpoint) {
