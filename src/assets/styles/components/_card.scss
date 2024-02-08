@@ -44,4 +44,10 @@
 			border-radius: 25px;
 		}
 	}
+
+	@include media-max($xsBreakpoint) {
+		& {
+			height: 255px;
+		}
+	}
 }

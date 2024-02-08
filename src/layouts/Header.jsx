@@ -6,7 +6,7 @@ const Header = () => {
 	return (
 		<header className="main-header">
 			<nav className="main-nav">
-				<img src={logo} alt="Kasa" className="logo" />
+				<img src={logo} alt="Logo de Kasa" className="logo" />
 				<ul className="links">
 					<li>
 						<NavLink
@@ -25,7 +25,7 @@ const Header = () => {
 								isActive ? "link active" : "link"
 							}
 						>
-							À propos
+							À Propos
 						</NavLink>
 					</li>
 				</ul>

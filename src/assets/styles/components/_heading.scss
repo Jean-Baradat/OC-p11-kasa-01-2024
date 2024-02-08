@@ -11,6 +11,20 @@
 		text-align: center;
 		color: #fff;
 		z-index: 2;
+		padding: 1rem;
+
+		@include media-max($smBreakpoint) {
+			& {
+				font-size: 2rem;
+			}
+		}
+
+		@include media-max($xsBreakpoint) {
+			& {
+				font-size: 1.5rem;
+				text-align: left;
+			}
+		}
 	}
 
 	.bg-image {
@@ -20,5 +34,12 @@
 		width: 100%;
 		border-radius: 25px;
 		filter: brightness(0.7);
+
+		@include media-max($xsBreakpoint) {
+			& {
+				height: 111px;
+				border-radius: 10px;
+			}
+		}
 	}
 }

@@ -30,6 +30,7 @@
 		display: flex;
 		list-style: none;
 		gap: 57px;
+		white-space: nowrap;
 
 		@include media-max($smBreakpoint) {
 			& {
@@ -40,6 +41,7 @@
 		@include media-max($xsBreakpoint) {
 			& {
 				gap: 26px;
+				text-transform: uppercase;
 			}
 		}
 
