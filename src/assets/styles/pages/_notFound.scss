@@ -7,14 +7,51 @@
 	gap: 139px;
 	padding: 139px 0;
 
+	@include media-max($xsBreakpoint) {
+		& {
+			gap: 113px;
+			padding: 113px 0;
+		}
+	}
+
 	.title {
 		font-size: 288px;
 		font-weight: 700;
 		line-height: 250px;
+
+		@include media-max($smBreakpoint) {
+			& {
+				font-size: 192px;
+				line-height: 180px;
+			}
+		}
+
+		@include media-max($xsBreakpoint) {
+			& {
+				font-size: 96px;
+				line-height: 90px;
+			}
+		}
 	}
 
 	.mess {
 		font-size: 36px;
+		text-align: center;
+		margin: 0 3rem;
+
+		@include media-max($smBreakpoint) {
+			& {
+				font-size: 27px;
+				margin: 0 2rem;
+			}
+		}
+
+		@include media-max($xsBreakpoint) {
+			& {
+				font-size: 18px;
+				margin: 0 1rem;
+			}
+		}
 	}
 
 	.link {
@@ -24,6 +61,12 @@
 
 		&:hover {
 			@include global-box-shadow;
+		}
+
+		@include media-max($xsBreakpoint) {
+			& {
+				font-size: 14px;
+			}
 		}
 	}
 }
