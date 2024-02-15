@@ -1,8 +1,8 @@
 .card {
-	border-radius: 10px;
 	width: 100%;
-	height: 340px;
+	height: 100%;
 	position: relative;
+	aspect-ratio: 1 / 1;
 
 	.title {
 		position: absolute;
@@ -26,7 +26,7 @@
 			width: 100%;
 			display: block;
 			object-fit: cover;
-			border-radius: 25px;
+			border-radius: 10px;
 		}
 
 		&::after {
@@ -41,13 +41,7 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			border-radius: 25px;
-		}
-	}
-
-	@include media-max($xsBreakpoint) {
-		& {
-			height: 255px;
+			border-radius: 10px;
 		}
 	}
 }
