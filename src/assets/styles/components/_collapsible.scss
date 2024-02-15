@@ -51,6 +51,13 @@
 			padding: 20px;
 			width: 100%;
 			font-weight: 400;
+			font-size: 18px;
+
+			@include media-max($xsBreakpoint) {
+				& {
+					font-size: 12px;
+				}
+			}
 		}
 	}
 }
