@@ -1,3 +1,17 @@
 .about {
 	padding-top: 50px;
+
+	& > .content {
+		padding: 30px 6rem;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+
+		@include media-max($smBreakpoint) {
+			& {
+				padding: 20px 0;
+				gap: 20px;
+			}
+		}
+	}
 }

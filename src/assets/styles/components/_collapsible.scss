@@ -1,0 +1,56 @@
+.collapsible {
+	button {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: $primary;
+		width: 100%;
+		border: none;
+		text-align: left;
+		padding: 10px 20px 10px 15px;
+		color: #fff;
+		border-radius: 5px;
+		cursor: pointer;
+
+		.title {
+			font-size: 24px;
+
+			@include media-max($xsBreakpoint) {
+				& {
+					font-size: 13px;
+				}
+			}
+		}
+
+		.collapsible-icon {
+			height: 30px;
+			transition: transform 0.25s linear;
+		}
+
+		&.isOpen .collapsible-icon {
+			transform: rotate(-180deg);
+		}
+
+		@include media-max($xsBreakpoint) {
+			& {
+				padding: 10px;
+			}
+		}
+	}
+
+	& > .content {
+		background-color: $secondary;
+		color: $primary;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		overflow: hidden;
+		transition: height 0.25s ease;
+
+		.content-text {
+			display: block;
+			padding: 20px;
+			width: 100%;
+			font-weight: 400;
+		}
+	}
+}
