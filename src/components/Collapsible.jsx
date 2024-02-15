@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react"
 import collapsibleIcon from "@/assets/images/collapsible-icon.svg"
+import PropTypes from "prop-types"
 
 const Collapsible = ({ title, content }) => {
 	const [open, setOpen] = useState(false)
@@ -33,6 +34,11 @@ const Collapsible = ({ title, content }) => {
 			</p>
 		</div>
 	)
+}
+
+Collapsible.propTypes = {
+	title: PropTypes.string.isRequired,
+	content: PropTypes.string.isRequired,
 }
 
 export default Collapsible
