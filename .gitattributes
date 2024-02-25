@@ -1,0 +1,5 @@
+* text=auto
+*.jsx text eol=lf
+*.js text eol=lf
+*.svg text eol=lf
+*.scss text eol=lf
