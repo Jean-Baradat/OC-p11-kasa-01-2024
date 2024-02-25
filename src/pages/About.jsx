@@ -1,6 +1,6 @@
 import React from "react"
 import Heading from "@/components/Heading"
-import Collapsible from "../components/Collapsible"
+import Collapsible from "@/components/Collapsible"
 
 const About = () => {
 	return (
