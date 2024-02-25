@@ -1,9 +1,20 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Card from "@/components/Card"
-import { useOutletContext } from "react-router-dom"
+import { getCardDataLogements } from "@/utils/ApiMock"
 
 const CardLayout = () => {
-	const [logements] = useOutletContext()
+	const [logements, setLogements] = useState(null)
+
+	useEffect(() => {
+		;(async () => {
+			try {
+				const result = await getCardDataLogements()
+				setLogements(result)
+			} catch {
+				setLogements(new Error("Impossible de récupérer les données"))
+			}
+		})()
+	}, [])
 
 	const render = logements => {
 		if (!logements) {
