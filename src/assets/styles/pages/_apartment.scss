@@ -1,3 +1,9 @@
 .apartment {
 	padding-top: 50px;
+
+	@include media-max($xsBreakpoint) {
+		& {
+			padding-top: 27px;
+		}
+	}
 }
