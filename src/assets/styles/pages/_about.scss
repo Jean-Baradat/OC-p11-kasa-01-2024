@@ -1,6 +1,12 @@
 .about {
 	padding-top: 50px;
 
+	@include media-max($xsBreakpoint) {
+		& {
+			padding-top: 27px;
+		}
+	}
+
 	& > .content {
 		padding: 30px 6rem;
 		display: flex;

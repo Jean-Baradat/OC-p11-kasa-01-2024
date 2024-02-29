@@ -27,4 +27,11 @@
 			padding: 2rem;
 		}
 	}
+
+	@include media-max($xsBreakpoint) {
+		& {
+			margin-top: 22px;
+			margin-bottom: 27px;
+		}
+	}
 }
