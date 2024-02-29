@@ -3,11 +3,7 @@ export const getCardDataLogements = async () => {
 		return new Promise((resolve, reject) => {
 			setTimeout(() => {
 				try {
-					resolve(
-						require(process.env.REACT_APP_API_URL)[
-							"CardDataLogements"
-						]
-					)
+					resolve(require(process.env.REACT_APP_API_URL)["CardDataLogements"])
 				} catch (error) {
 					reject(error)
 				}
@@ -15,9 +11,7 @@ export const getCardDataLogements = async () => {
 		})
 	} else {
 		try {
-			const response = await fetch(
-				process.env.REACT_APP_API_URL_LOGEMENTS_CARD
-			)
+			const response = await fetch(process.env.REACT_APP_API_URL_LOGEMENTS_CARD)
 			return await response.json()
 		} catch (error) {
 			console.error(error)
@@ -30,13 +24,9 @@ export const getLogement = async id => {
 		return new Promise((resolve, reject) => {
 			setTimeout(() => {
 				try {
-					const logements = require(process.env.REACT_APP_API_URL)[
-						"logements"
-					]
+					const logements = require(process.env.REACT_APP_API_URL)["logements"]
 
-					const currentLogement = logements.find(
-						logement => logement.id === id
-					)
+					const currentLogement = logements.find(logement => logement.id === id)
 
 					if (currentLogement) {
 						resolve(currentLogement)
@@ -50,9 +40,7 @@ export const getLogement = async id => {
 		})
 	} else {
 		try {
-			const response = await fetch(
-				process.env.REACT_APP_API_URL_LOGEMENTS_PAGE
-			)
+			const response = await fetch(process.env.REACT_APP_API_URL_LOGEMENTS_PAGE)
 			return await response.json()
 		} catch (error) {
 			console.error(error)

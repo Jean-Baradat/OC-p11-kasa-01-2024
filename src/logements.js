@@ -75,12 +75,7 @@ export const logements = [
 		},
 		rating: "3",
 		location: "Ile de France - Paris 20e",
-		equipments: [
-			"Wi-fi",
-			"Cuisine équipée",
-			"Télévision",
-			"Sèche Cheveux",
-		],
+		equipments: ["Wi-fi", "Cuisine équipée", "Télévision", "Sèche Cheveux"],
 		tags: ["Buttes Chaumont", "Laumière", "Studio"],
 	},
 	{
@@ -322,13 +317,7 @@ export const logements = [
 			"TV",
 			"Bouilloire",
 		],
-		tags: [
-			"Marais",
-			"République",
-			"Studio",
-			"Proche Métros",
-			"Commerces",
-		],
+		tags: ["Marais", "République", "Studio", "Proche Métros", "Commerces"],
 	},
 	{
 		id: "af6d2d48",

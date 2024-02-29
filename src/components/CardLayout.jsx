@@ -13,7 +13,10 @@ const CardLayout = () => {
 				<p>{logements.message}</p>
 			) : (
 				logements.map(logement => (
-					<Card key={logement.id} logement={logement} />
+					<Card
+						key={logement.id}
+						logement={logement}
+					/>
 				))
 			)}
 		</div>

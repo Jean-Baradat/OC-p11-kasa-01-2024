@@ -15,9 +15,7 @@ const Carousel = ({ pictures }) => {
 			index === 0 ? "ère" : "ème"
 		} image de l'appartement`
 
-		newCarouselImageList[
-			index
-		] = `<img src=${pictures[index]} alt="${alt}" />`
+		newCarouselImageList[index] = `<img src=${pictures[index]} alt="${alt}" />`
 
 		setCarouselImageList(newCarouselImageList)
 		// eslint-disable-next-line
@@ -32,9 +30,7 @@ const Carousel = ({ pictures }) => {
 					index === 0 ? "ère" : "ème"
 				} image de l'appartement`
 
-				newCarouselImageList[
-					index
-				] = `<img src=${picture} alt="${alt}" />`
+				newCarouselImageList[index] = `<img src=${picture} alt="${alt}" />`
 
 				setCarouselImageList(newCarouselImageList)
 			})
@@ -42,16 +38,12 @@ const Carousel = ({ pictures }) => {
 	}
 
 	const handleClickNext = () => {
-		setIndex(
-			prevIndex => (prevIndex + pictures.length + 1) % pictures.length
-		)
+		setIndex(prevIndex => (prevIndex + pictures.length + 1) % pictures.length)
 	}
 
 	const handleClickPrevious = () => {
 		loadAllCarouselSlide()
-		setIndex(
-			prevIndex => (prevIndex + pictures.length - 1) % pictures.length
-		)
+		setIndex(prevIndex => (prevIndex + pictures.length - 1) % pictures.length)
 	}
 
 	return (
@@ -62,13 +54,19 @@ const Carousel = ({ pictures }) => {
 						className="btn-previous btn remove-btn-default-style"
 						onClick={handleClickPrevious}
 					>
-						<img src={carouselIcon} alt="Aller à gauche" />
+						<img
+							src={carouselIcon}
+							alt="Aller à gauche"
+						/>
 					</button>
 					<button
 						className="btn-next btn remove-btn-default-style"
 						onClick={handleClickNext}
 					>
-						<img src={carouselIcon} alt="Aller à droite" />
+						<img
+							src={carouselIcon}
+							alt="Aller à droite"
+						/>
 					</button>
 				</>
 			)}

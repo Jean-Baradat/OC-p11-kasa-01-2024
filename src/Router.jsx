@@ -7,13 +7,25 @@ const Router = () => {
 	return (
 		<Routes>
 			<Route element={<Layout />}>
-				<Route index element={<Home />} />
+				<Route
+					index
+					element={<Home />}
+				/>
 
-				<Route path="/about" element={<About />} />
+				<Route
+					path="/about"
+					element={<About />}
+				/>
 
-				<Route path="/apartment/:id" element={<Apartment />} />
+				<Route
+					path="/apartment/:id"
+					element={<Apartment />}
+				/>
 
-				<Route path="*" element={<NotFound />} />
+				<Route
+					path="*"
+					element={<NotFound />}
+				/>
 			</Route>
 		</Routes>
 	)

@@ -6,14 +6,16 @@ const Header = () => {
 	return (
 		<header className="main-header">
 			<nav className="main-nav">
-				<img src={logo} alt="Logo de Kasa" className="logo" />
+				<img
+					src={logo}
+					alt="Logo de Kasa"
+					className="logo"
+				/>
 				<ul className="links">
 					<li>
 						<NavLink
 							to="/"
-							className={({ isActive }) =>
-								isActive ? "link active" : "link"
-							}
+							className={({ isActive }) => (isActive ? "link active" : "link")}
 						>
 							Accueil
 						</NavLink>
@@ -21,9 +23,7 @@ const Header = () => {
 					<li>
 						<NavLink
 							to="/about"
-							className={({ isActive }) =>
-								isActive ? "link active" : "link"
-							}
+							className={({ isActive }) => (isActive ? "link active" : "link")}
 						>
 							À Propos
 						</NavLink>
