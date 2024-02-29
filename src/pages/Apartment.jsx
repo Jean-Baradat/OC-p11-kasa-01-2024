@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { getLogement } from "@/utils/ApiMock"
+import Carousel from "@/components/Carousel"
 
 const Apartment = () => {
 	let { id } = useParams()
 	const [logement, setLogement] = useState(null)
+	const navigate = useNavigate()
 
 	useEffect(() => {
 		;(async () => {
@@ -12,15 +14,25 @@ const Apartment = () => {
 				const result = await getLogement(id)
 				setLogement(result)
 			} catch (error) {
-				console.log(error)
+				navigate("/")
 			}
 		})()
 		// eslint-disable-next-line
 	}, [])
 
 	return (
-		<main className="min-height-adjustment centered-container">
-			<div>Fiche logement</div>
+		<main className="min-height-adjustment centered-container apartment">
+			{!logement ? (
+				<p>Chargement des données...</p>
+			) : (
+				<>
+					<Carousel pictures={logement.pictures} />
+					<div>
+						<p>{logement.title}</p>
+						<p>{logement.location}</p>
+					</div>
+				</>
+			)}
 		</main>
 	)
 }

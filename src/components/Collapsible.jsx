@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react"
-import collapsibleIcon from "@/assets/images/collapsible-icon.svg"
+import collapsibleIcon from "@/assets/images/chevron-icon.svg"
 import PropTypes from "prop-types"
 
 const Collapsible = ({ title, content }) => {

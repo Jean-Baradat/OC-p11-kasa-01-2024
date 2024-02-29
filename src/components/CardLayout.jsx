@@ -5,19 +5,19 @@ import { useOutletContext } from "react-router-dom"
 const CardLayout = () => {
 	const [logements] = useOutletContext()
 
-	const render = logements => {
-		if (!logements) {
-			return <p>Chargement des données...</p>
-		} else if (logements instanceof Error) {
-			return <p>{logements.message}</p>
-		} else {
-			return logements.map(logement => (
-				<Card key={logement.id} logement={logement} />
-			))
-		}
-	}
-
-	return <div className="cards-layout">{render(logements)}</div>
+	return (
+		<div className="cards-layout">
+			{!logements ? (
+				<p>Chargement des données...</p>
+			) : logements instanceof Error ? (
+				<p>{logements.message}</p>
+			) : (
+				logements.map(logement => (
+					<Card key={logement.id} logement={logement} />
+				))
+			)}
+		</div>
+	)
 }
 
 export default CardLayout
