@@ -1,6 +1,91 @@
 .apartment {
 	padding-top: 50px;
 
+	.apartment-infos {
+		margin: 30px 0;
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: auto;
+		row-gap: 2rem;
+
+		@include media-max($xsBreakpoint) {
+			& {
+				grid-template-columns: 1fr;
+				grid-template-rows: 3fr;
+				row-gap: 1rem;
+				margin-top: 15px;
+			}
+		}
+
+		.left-part {
+			grid-column: 1;
+			grid-row: 1;
+
+			.title {
+				font-size: 36px;
+				color: $primary;
+
+				@include media-max($xsBreakpoint) {
+					& {
+						font-size: 18px;
+					}
+				}
+			}
+
+			.subtitle {
+				font-size: 18px;
+				color: $primary;
+				padding-bottom: 20px;
+
+				@include media-max($xsBreakpoint) {
+					& {
+						padding-bottom: 15px;
+						padding-top: 10px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		.right-part {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: space-between;
+			grid-column: 2;
+			grid-row: 1;
+			max-height: 7rem;
+
+			@include media-max($xsBreakpoint) {
+				& {
+					flex-direction: row-reverse;
+					align-items: center;
+					grid-column: 1;
+					grid-row: 2;
+					max-height: initial;
+				}
+			}
+		}
+
+		.collapsibles {
+			grid-column: 1 / 3;
+			grid-row: 2;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: auto;
+			gap: 5vw;
+
+			@include media-max($xsBreakpoint) {
+				& {
+					grid-column: 1;
+					grid-row: 3;
+					grid-template-columns: 1fr;
+					gap: 20px;
+				}
+			}
+		}
+	}
+
 	@include media-max($xsBreakpoint) {
 		& {
 			padding-top: 27px;

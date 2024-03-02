@@ -22,6 +22,7 @@
 	.slide-container {
 		display: flex;
 		width: 100%;
+		height: 100%;
 		transition: transform 0.7s cubic-bezier(0.23, 0.05, 0, 1.02);
 
 		.slide {
@@ -36,15 +37,35 @@
 		}
 	}
 
+	.slide-number {
+		position: absolute;
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		color: #fff;
+		bottom: 24px;
+
+		@include media-max($xsBreakpoint) {
+			& {
+				display: none;
+			}
+		}
+	}
+
 	.btn {
 		width: 5rem;
 		position: absolute;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		z-index: 2;
+		z-index: 3;
 		height: 100%;
 		transition: background-color 0.2s ease;
+
+		&:hover > .icon-btn {
+			transform: scale(1.1);
+		}
 
 		@include media-min($mdBreakpoint) {
 			& {
@@ -60,9 +81,11 @@
 			}
 		}
 
-		img {
+		.icon-btn {
 			transition: transform 0.2s ease;
-			pointer-events: none;
+			color: #fff;
+			width: 3.5rem;
+			height: 3.5rem;
 
 			@include media-max($xsBreakpoint) {
 				& {
@@ -76,26 +99,10 @@
 	.btn-previous {
 		left: 0;
 		padding-right: 0.5rem;
-
-		&:hover > img {
-			transform: scale(1.1) rotate(-90deg);
-		}
-
-		img {
-			transform: rotate(-90deg);
-		}
 	}
 
 	.btn-next {
 		right: 0;
 		padding-left: 0.5rem;
-
-		&:hover > img {
-			transform: scale(1.1) rotate(90deg);
-		}
-
-		img {
-			transform: rotate(90deg);
-		}
 	}
 }

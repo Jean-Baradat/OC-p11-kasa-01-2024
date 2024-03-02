@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react"
 import { PropTypes } from "prop-types"
-import carouselIcon from "@/assets/images/chevron-icon.svg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+	faChevronLeft,
+	faChevronRight,
+} from "@fortawesome/free-solid-svg-icons"
 
 const Carousel = ({ pictures }) => {
 	const [carouselImageList, setCarouselImageList] = useState([
@@ -54,20 +58,25 @@ const Carousel = ({ pictures }) => {
 						className="btn-previous btn remove-btn-default-style"
 						onClick={handleClickPrevious}
 					>
-						<img
-							src={carouselIcon}
+						<FontAwesomeIcon
 							alt="Aller à gauche"
+							icon={faChevronLeft}
+							className="icon-btn"
 						/>
 					</button>
 					<button
 						className="btn-next btn remove-btn-default-style"
 						onClick={handleClickNext}
 					>
-						<img
-							src={carouselIcon}
+						<FontAwesomeIcon
 							alt="Aller à droite"
+							icon={faChevronRight}
+							className="icon-btn"
 						/>
 					</button>
+					<div className="slide-number">
+						{index + 1}/{pictures.length}
+					</div>
 				</>
 			)}
 

@@ -13,11 +13,9 @@
 		cursor: pointer;
 
 		.title {
-			font-size: 24px;
-
 			@include media-max($xsBreakpoint) {
 				& {
-					font-size: 13px;
+					font-size: 13px !important;
 				}
 			}
 		}
@@ -52,10 +50,11 @@
 			width: 100%;
 			font-weight: 400;
 			font-size: 18px;
+			list-style: none;
 
 			@include media-max($xsBreakpoint) {
 				& {
-					font-size: 12px;
+					font-size: 12px !important;
 				}
 			}
 		}

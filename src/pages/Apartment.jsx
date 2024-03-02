@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react"
-import { useNavigate, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { getLogement } from "@/utils/ApiMock"
 import Carousel from "@/components/Carousel"
+import HostProfile from "@/components/HostProfile"
+import Tags from "@/components/Tags"
+import StarRating from "@/components/StarRating"
+import Collapsible from "@/components/Collapsible"
+import NotFound from "./NotFound"
 
 const Apartment = () => {
 	let { id } = useParams()
 	const [logement, setLogement] = useState(null)
-	const navigate = useNavigate()
 
 	useEffect(() => {
 		;(async () => {
@@ -14,7 +18,7 @@ const Apartment = () => {
 				const result = await getLogement(id)
 				setLogement(result)
 			} catch (error) {
-				navigate("/")
+				setLogement(error)
 			}
 		})()
 		// eslint-disable-next-line
@@ -24,13 +28,46 @@ const Apartment = () => {
 		<main className="min-height-adjustment centered-container apartment">
 			{!logement ? (
 				<p>Chargement des données...</p>
+			) : logement instanceof Error ? (
+				<NotFound />
 			) : (
 				<>
 					<Carousel pictures={logement.pictures} />
-					<div>
-						<p>{logement.title}</p>
-						<p>{logement.location}</p>
-					</div>
+					<section className="apartment-infos">
+						<div className="left-part">
+							<h1 className="title">{logement.title}</h1>
+							<p className="subtitle">{logement.location}</p>
+							<Tags tags={logement.tags} />
+						</div>
+						<div className="right-part">
+							<HostProfile host={logement.host} />
+							<StarRating rating={logement.rating} />
+						</div>
+						<div className="collapsibles">
+							<Collapsible
+								titleData={{
+									size: 18,
+									title: "Description",
+								}}
+								contentData={{
+									type: String,
+									size: 16,
+									content: logement.description,
+								}}
+							/>
+							<Collapsible
+								titleData={{
+									size: 18,
+									title: "Équipements",
+								}}
+								contentData={{
+									type: Array,
+									size: 16,
+									content: logement.equipments,
+								}}
+							/>
+						</div>
+					</section>
 				</>
 			)}
 		</main>

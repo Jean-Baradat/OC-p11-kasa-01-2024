@@ -1,8 +1,9 @@
 import React, { useRef, useState } from "react"
-import collapsibleIcon from "@/assets/images/chevron-icon.svg"
 import PropTypes from "prop-types"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons"
 
-const Collapsible = ({ title, content }) => {
+const Collapsible = ({ titleData, contentData }) => {
 	const [open, setOpen] = useState(false)
 
 	const contentRef = useRef()
@@ -14,14 +15,21 @@ const Collapsible = ({ title, content }) => {
 				type="button"
 				onClick={() => setOpen(!open)}
 			>
-				<h3 className="title">{title}</h3>
-				<img
-					src={collapsibleIcon}
-					alt="Icône rétractable"
+				<h3
+					className="title"
+					style={{
+						fontSize: `${titleData.size}px`,
+					}}
+				>
+					{titleData.title}
+				</h3>
+				<FontAwesomeIcon
 					className="collapsible-icon"
+					alt="Icône rétractable"
+					icon={faChevronUp}
 				/>
 			</button>
-			<p
+			<div
 				className="content"
 				ref={contentRef}
 				style={
@@ -30,15 +38,48 @@ const Collapsible = ({ title, content }) => {
 						: { height: 0 + "px" }
 				}
 			>
-				<span className="content-text">{content}</span>
-			</p>
+				{contentData.type === Array ? (
+					<ul
+						className="content-text"
+						style={{
+							fontSize: `${contentData.size}px`,
+						}}
+					>
+						{contentData.content.map((content, index) => (
+							// eslint-disable-next-line
+							<li key={index}>{content}</li>
+						))}
+					</ul>
+				) : (
+					<p
+						className="content-text"
+						style={{
+							fontSize: `${contentData.size}px`,
+						}}
+					>
+						{contentData.content}
+					</p>
+				)}
+			</div>
 		</div>
 	)
 }
 
 Collapsible.propTypes = {
-	title: PropTypes.string.isRequired,
-	content: PropTypes.string.isRequired,
+	contentData: PropTypes.shape({
+		type: PropTypes.oneOfType([
+			PropTypes.instanceOf(String),
+			PropTypes.instanceOf(Number),
+			PropTypes.instanceOf(Array),
+			PropTypes.instanceOf(Object),
+		]).isRequired,
+		content: PropTypes.any.isRequired,
+		size: PropTypes.number,
+	}).isRequired,
+	titleData: PropTypes.shape({
+		title: PropTypes.string.isRequired,
+		size: PropTypes.number,
+	}).isRequired,
 }
 
 export default Collapsible

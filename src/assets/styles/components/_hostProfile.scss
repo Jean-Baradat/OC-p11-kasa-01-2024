@@ -1,0 +1,30 @@
+.host-information {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	.host-name {
+		color: $primary;
+		font-size: 18px;
+		text-align: right;
+
+		@include media-max($xsBreakpoint) {
+			& {
+				font-size: 12px;
+			}
+		}
+	}
+
+	.host-picture {
+		border-radius: 5rem;
+		width: 64px;
+		height: 64px;
+
+		@include media-max($xsBreakpoint) {
+			& {
+				width: 32px;
+				height: 32px;
+			}
+		}
+	}
+}

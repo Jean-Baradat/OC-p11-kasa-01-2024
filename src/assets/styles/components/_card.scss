@@ -3,6 +3,17 @@
 	height: 100%;
 	position: relative;
 	aspect-ratio: 1 / 1;
+	transition: box-shadow 0.1s linear;
+	border-radius: 10px;
+
+	&:hover {
+		box-shadow: 0 0 0 3px $primary;
+	}
+
+	&:hover > .title {
+		color: $primary;
+		text-shadow: -1px 1px 10px rgba(0, 0, 0, 0.75);
+	}
 
 	.title {
 		position: absolute;
@@ -14,6 +25,7 @@
 		color: #fff;
 		z-index: 2;
 		padding: 0 20px 20px 20px;
+		transition: color 0.1s linear, text-shadow 0.1s linear;
 	}
 
 	.image-wrapper {
