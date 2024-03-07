@@ -44,7 +44,7 @@ npm run lint:fix
 
 ## Environment variables
 
-This project used the environment variables in :
+This project used the environment variables in:
 - `.env.development`
 - `.env.production`
 
