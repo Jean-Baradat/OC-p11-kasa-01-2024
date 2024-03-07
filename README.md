@@ -18,17 +18,29 @@ If you need more information about the project, please go to **package.json**
 
 In the project directory, you can run:
 
-### `npm run start:craco`
+### Launch
 To launch the project locally with the craco configuration
+```
+npm run start:craco
+```
 
-### `npm run build:craco`
+### Build
 Create a project build with the craco configuration
+```
+npm run build:craco
+```
 
-### `npm run lint`
+### Linting
 Get information on code formatting with ESlint configuration
+```
+npm run lint
+```
 
-### `npm run lint:fix`
+### Lint all code
 Make an automatic correction with the project configuration for all JSX files
+```
+npm run lint:fix
+```
 
 ## Environment variables
 
